@@ -1,0 +1,16 @@
+.flashcards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.flashcards > div{
+  width: 300px;
+  background-color: gray;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+.flashcards > div.selected{
+  background-color: rgb(113, 208, 113);
+}
