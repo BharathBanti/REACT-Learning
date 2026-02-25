@@ -1,0 +1,125 @@
+:root {
+  font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #edf2f7;
+  background-color: #0a1223;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 2.5rem 1.25rem;
+  background:
+    radial-gradient(circle at 10% 10%, #1b2a52 0%, transparent 40%),
+    radial-gradient(circle at 90% 85%, #2f4d8e 0%, transparent 45%),
+    linear-gradient(155deg, #050a17 0%, #0a1223 45%, #101d36 100%);
+  color: #edf2f7;
+}
+
+#root {
+  width: min(100%, 980px);
+  margin: 0 auto;
+}
+
+.container {
+  background: rgba(13, 24, 46, 0.8);
+  border: 1px solid rgba(158, 181, 230, 0.22);
+  border-radius: 24px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 45px rgba(2, 9, 24, 0.45);
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  letter-spacing: 0.03em;
+  color: #f8fbff;
+}
+
+.grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid rgba(166, 189, 241, 0.25);
+  background: linear-gradient(180deg, rgba(30, 46, 80, 0.7), rgba(17, 29, 53, 0.95));
+  box-shadow: 0 10px 24px rgba(0, 6, 20, 0.28);
+}
+
+.card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  color: #d8e6ff;
+}
+
+.card p {
+  margin: 0 0 0.9rem;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+button {
+  border: 1px solid rgba(170, 192, 238, 0.4);
+  border-radius: 10px;
+  padding: 0.48rem 0.8rem;
+  background: linear-gradient(180deg, #5b7ac6, #3c5a9a);
+  color: #f8fbff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.12s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 8px 14px rgba(18, 31, 56, 0.45);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(186, 211, 255, 0.7);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.85rem;
+  }
+
+  .container {
+    padding: 1.1rem;
+    border-radius: 18px;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
