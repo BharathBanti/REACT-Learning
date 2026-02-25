@@ -97,7 +97,6 @@ function Menu() {
     </main>
   )
 }
-
 function Pizza({ pizzaObj }) {
 
   return (
