@@ -1,0 +1,196 @@
+.goals-page {
+  width: 100%;
+}
+
+.add-goal-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--panel);
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.05);
+}
+
+.goal-form-card {
+  width: 100%;
+  max-width: 44rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--panel-soft);
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.05);
+}
+
+.goal-form-header {
+  margin-bottom: 1.25rem;
+}
+
+.goal-form-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.goal-form-subtitle {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.goal-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.goal-form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.goal-form-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.goal-form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.goal-form-group input,
+.goal-form-group textarea,
+.goal-form-group select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.625rem;
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.goal-form-group textarea {
+  resize: vertical;
+  min-height: 6.5rem;
+}
+
+.goal-form-group input::placeholder,
+.goal-form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.goal-form-group input:focus,
+.goal-form-group textarea:focus,
+.goal-form-group select:focus {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+.goal-form-submit-btn {
+  justify-self: start;
+  padding: 0.7rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.625rem;
+  background: var(--primary-hover);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.goal-form-submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+.goal-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.goal-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 46rem;
+}
+
+.goal-modal-content .goal-form-card {
+  max-width: none;
+}
+
+.goal-modal-close-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.goal-modal-close-btn:hover {
+  background: var(--border);
+}
+
+@media (max-width: 639px) {
+  .add-goal-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-goal-panel .goal-form-submit-btn {
+    width: 100%;
+  }
+
+  .goal-modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .goal-modal-content {
+    max-width: none;
+  }
+
+  .goal-modal-content .goal-form-card {
+    border-radius: 0.85rem 0.85rem 0 0;
+    border-bottom: 0;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .goal-form-card {
+    padding: 1.5rem;
+  }
+
+  .goal-form-title {
+    font-size: 1.5rem;
+  }
+
+  .goal-form-subtitle {
+    font-size: 1rem;
+  }
+
+  .goal-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
