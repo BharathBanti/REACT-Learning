@@ -1,0 +1,158 @@
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 2.5rem 1.25rem;
+  background:
+    radial-gradient(circle at 18% 18%, #ffe2b8 0%, transparent 40%),
+    radial-gradient(circle at 82% 12%, #ffd5cc 0%, transparent 38%),
+    linear-gradient(135deg, #f9f7ef 0%, #f0ece1 52%, #ede6d7 100%);
+}
+
+.app-panel {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 24px;
+  border: 1px solid #d8ccb8;
+  background: #fffefb;
+  box-shadow: 0 18px 45px rgba(79, 60, 30, 0.12);
+}
+
+.app-title {
+  margin: 0 0 1rem;
+  color: #2f1f12;
+  letter-spacing: 0.04em;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  text-transform: uppercase;
+}
+
+.topbar {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.topbar-input,
+.topbar-textarea {
+  width: 100%;
+  border: 1px solid #cebda3;
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  font-size: 0.98rem;
+  font-family: inherit;
+  background: #fffaf0;
+  color: #362315;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topbar-input:focus,
+.topbar-textarea:focus {
+  outline: none;
+  border-color: #b06a2d;
+  box-shadow: 0 0 0 3px rgba(176, 106, 45, 0.18);
+}
+
+.topbar-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.topbar-button {
+  justify-self: start;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: linear-gradient(135deg, #ca6a30, #9f3f1f);
+  box-shadow: 0 8px 18px rgba(150, 58, 25, 0.28);
+}
+
+.topbar-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 11px 22px rgba(150, 58, 25, 0.34);
+}
+
+.notes-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.notes-item {
+  min-width: 0;
+}
+
+.note-card {
+  height: 100%;
+  display: grid;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid #d3c3ae;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fffdf8 0%, #fff7ec 100%);
+  box-shadow: 0 8px 18px rgba(70, 45, 20, 0.08);
+}
+
+.note-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #2f1f12;
+  text-transform: capitalize;
+}
+
+.note-description {
+  margin: 0;
+  color: #5f4632;
+  line-height: 1.45;
+}
+
+.note-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.55rem;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: bolder;
+}
+
+.action-edit {
+  background: #ffd88f;
+  color: #603400;
+}
+
+.action-delete {
+  background: #ffb7a9;
+  color: #5e150c;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 1rem 0.75rem;
+  }
+
+  .app-panel {
+    border-radius: 16px;
+    padding: 1rem;
+  }
+}
+
+.empty-notes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #9f3f1f;
+}
