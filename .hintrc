@@ -8,5 +8,15 @@
     "not and_ff <= 146",
     "not firefox <= 146",
     "not opera <= 125"
-  ]
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter"
+        ]
+      }
+    ]
+  }
 }
