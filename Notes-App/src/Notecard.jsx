@@ -1,17 +1,28 @@
-export default function NoteCard({ id, title, description, handleDeleteNote }) {
-  
-  function onDelete(){
+import NoteCardActions from './NoteCardActions';
+
+export default function NoteCard({
+  id,
+  title,
+  description,
+  handleDeleteNote,
+  handleOpenNoteModal,
+  handleOpenEditModal,
+}) {
+  function onEdit(e) {
+    e.stopPropagation();
+    handleOpenEditModal();
+  }
+
+  function onDelete(e) {
+    e.stopPropagation();
     handleDeleteNote(id);
   }
 
   return (
-    <div className="note-card">
+    <div className="note-card" onClick={handleOpenNoteModal}>
       <h2 className="note-title">{title}</h2>
-      <p className="note-description">{description}</p>
-      <div className="note-actions">
-        <button className="action-btn action-edit">Edit</button>
-        <button className="action-btn action-delete" onClick={onDelete}>Delete</button>
-      </div>
+      <div className="note-description">{description}</div>
+      <NoteCardActions onEdit={onEdit} onDelete={onDelete} />
     </div>
   );
 }

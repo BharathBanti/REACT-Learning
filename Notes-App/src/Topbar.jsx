@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import TopbarActions from './TopbarActions';
 
-export default function Topbar({ handleAddNote }) {
+export default function Topbar({ handleAddNote, handleDeleteAll, hasNotes }) {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
 
@@ -27,9 +28,11 @@ export default function Topbar({ handleAddNote }) {
         onChange={(e) => setDesc(e.target.value)}
         placeholder="Enter description"
       ></textarea>
-      <button className="topbar-button" onClick={onAddNote}>
-        Add Note
-      </button>
+      <TopbarActions
+        onAddNote={onAddNote}
+        onDeleteAll={handleDeleteAll}
+        hasNotes={hasNotes}
+      />
     </div>
   );
 }
