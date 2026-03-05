@@ -165,6 +165,27 @@
   align-items: stretch;
 }
 
+.expense-empty-state {
+  margin-top: 16px;
+  padding: 28px 20px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #1b2738 0%, #172131 100%);
+  border: 1px dashed #3a5270;
+  text-align: center;
+}
+
+.expense-empty-state__title {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.expense-empty-state__text {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
 .expense-list__item {
   margin: 0;
   padding: 0;

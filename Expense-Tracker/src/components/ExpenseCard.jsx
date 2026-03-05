@@ -1,4 +1,4 @@
-function ExpenseCard({ expense }) {
+function ExpenseCard({ expense, onDelete }) {
   return (
     <article className="expense-card">
       <div className="expense-card__main">
@@ -20,7 +20,7 @@ function ExpenseCard({ expense }) {
         </button>
         <button
           className="expense-card__btn expense-card__btn--delete"
-          type="button"
+          type="button" onClick={onDelete}
         >
           Delete
         </button>

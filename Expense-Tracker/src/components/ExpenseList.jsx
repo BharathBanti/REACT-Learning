@@ -1,20 +1,31 @@
 import ExpenseCard from './ExpenseCard';
 
-function ExpenseList({expenseList}){
+function ExpenseList({ expenseList, onDelete }) {
   return (
-    <ul className="expense-list">
-        {expenseList.map((expense, index) => {
-          return (
-            <li
-              className="expense-list__item"
-              key={`${expense.title}-${expense.date}-${index}`}
-            >
-              <ExpenseCard expense={expense} />
-            </li>
-          );
-        })}
-      </ul>
-  )
+    <>
+      {expenseList.length === 0 ? (
+        <div className="expense-empty-state">
+          <h3 className="expense-empty-state__title">No expenses yet</h3>
+          <p className="expense-empty-state__text">
+            Add your first expense above to start tracking spending.
+          </p>
+        </div>
+      ) : (
+        <ul className="expense-list">
+          {expenseList.map((expense) => {
+            return (
+              <li className="expense-list__item" key={expense.id}>
+                <ExpenseCard
+                  expense={expense}
+                  onDelete={() => onDelete(expense.id)}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </>
+  );
 }
 
 export default ExpenseList;
